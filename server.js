@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/contact', async (require, res) => {
+app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
     // Basic Validation
