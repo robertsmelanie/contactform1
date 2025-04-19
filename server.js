@@ -16,7 +16,7 @@ app.post('/contact', async (require, res) => {
     }
 
     // Nodemailer setup
-    const transporter = nodeMailer.createTransport({
+    const transporter = nodemailer.createTransport({
         service: 'gmail', // or use any SMTP Server
         auth: {
             user: process.env.EMAIL_USER,
@@ -35,8 +35,8 @@ app.post('/contact', async (require, res) => {
         await transporter.sendMail(mailOptions);
         res.send('Email sent successfully!');
     } catch (error) {
+        console.error(error);
         res.status(500).send('Error sending email.');
-
     }
 });
 
