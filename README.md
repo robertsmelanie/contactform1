@@ -28,3 +28,6 @@ EMAIL_USER=your_gmail@gmail.com EMAIL_PASS=abcdefghijklmnop
 - Form submits to `/contact` via POST
 - Use `node server.js` to start the backend
 Go here 👉 https://myaccount.google.com/apppasswords
+
+
+Will continue to develop the contact form.
